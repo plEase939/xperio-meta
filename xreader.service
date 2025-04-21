@@ -1,0 +1,14 @@
+[Unit]
+Description=XReader Service
+After=network.target
+
+[Service]
+ExecStart=/home/osboxes/xperio/xreader
+WorkingDirectory=/home/osboxes/
+StandardOutput=append:/var/log/xreader_output.log
+StandardError=append:/var/log/xreader_error.log
+Restart=always
+User=osboxes
+
+[Install]
+WantedBy=multi-user.target

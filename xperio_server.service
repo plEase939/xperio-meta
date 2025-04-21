@@ -1,0 +1,14 @@
+[Unit]
+Description=Server Binary Service
+After=network.target
+
+[Service]
+ExecStart=/home/osboxes/xperio/server.bin
+WorkingDirectory=/home/osboxes/xperio/
+StandardOutput=append:/var/log/xperio_server_output.log
+StandardError=append:/var/log/xperio_server_error.log
+Restart=always
+User=osboxes
+
+[Install]
+WantedBy=multi-user.target
