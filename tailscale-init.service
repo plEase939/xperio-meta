@@ -1,0 +1,10 @@
+[Unit]
+Description=Initialize Tailscale
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tailscale-init.sh
+
+[Install]
+WantedBy=multi-user.target
